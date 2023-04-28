@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/15492b6dfd.js" crossorigin="anonymous"></script>
+  <title>EV-M3 SISTEMA DE COMUNICACIÓN Y SOPORTE</title>
+</head>
+<body>
+  <header class="">
+    <nav class="navbar navbar-expand-lg bg-Teal-petrol navbar-dark py-0">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"> <small>Soporte</small> <i class="fa-regular fa-comment-dots fa-xl"></i></a>
+        <button class="navbar-toggler nav__button py-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar__links collapse navbar-collapse py-1 justify-content-between" id="navbarSupportedContent">
+          <ul class="navbar-nav text-white fw-light pe-4 d-flex flex-sm-row justify-content-evenly flex-fill">
+            <li class="nav-item text-wrap text-center">
+              <i class="fa-solid fa-house"></i>
+              <a class="nav-link py-0 px-2" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item  text-wrap text-center">
+              <i class="fa-regular fa-newspaper"></i>
+              <a class="nav-link py-0 px-2" aria-current="page" href="#">Noticias</a>
+            </li>
+            <li class="nav-item  text-wrap text-center">
+              <i class="fa-solid fa-clipboard-question"></i>
+              <a class="nav-link py-0 px-2" aria-current="page" href="#">FAQs</a>
+            </li>
+            <li class="nav-item  text-wrap text-center">
+              <i class="fa-solid fa-book"></i>
+              <a class="nav-link py-0 px-2" aria-current="page" href="#">Manuales</a>
+            </li>
+            <li class="nav-item  text-wrap text-center">
+              <i class="fa-solid fa-calendar-days"></i>
+              <a class="nav-link py-0 px-2" aria-current="page" href="#">Calendario</a>
+            </li>
+            <li class="nav-item  text-wrap text-center">
+              <i class="fa-solid fa-sitemap"></i>
+              <a class="nav-link py-0 px-2" aria-current="page" href="#">Organigrama</a>
+            </li>
+            <li class="nav-item  text-wrap text-center">
+              <i class="fa-solid fa-user-gear"></i>
+              <a class="nav-link py-0 px-2" aria-current="page" href="#">Users</a>
+            </li>
+            <li class="nav-item  text-wrap text-center">
+              <i class="fa-regular fa-comment-dots"></i>
+              <a class="nav-link py-0 px-2 active" aria-current="page" href="#chat__encabezado">Soporte</a>
+            </li>
+          </ul>
+          <form class="busqueda d-flex py-2 px-0 ps-3 flex-grow-1" role="search">
+            <input class="form-control me-2 form-control-sm" type="search" placeholder="Buscar en conversaciones" aria-label="Search">
+            <button class="btn btn-outline-light btn-sm" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="chatView row m-0 d-flex flex-column justify-content-between position-relative w-100 flex-lg-row">
+    <div class="col-12 col-lg-5 col-xl-4 p-0 bg-light">
+      <nav class="nav__conversaciones navbar navbar-expand-lg bg-light position-absolute end-1 bg-transparent align-items-stretch ">
+        <div class="cuerpo-nav d-lg-flex flex-lg-column">
+          <a class="brand__titulo navbar-brand d-lg-block d-xl-block d-none">Conversaciones</a>
+          <button class="navbar-toggler btn-toggle p-1 bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <i class="fa-regular fa-comments"></i>
+            <small class="toggle__text d-block fw-light">Recientes</small>
+          </button>
+          <div class="offcanvas__mobile offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Conversaciones</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body px-0 align-items-start">
+              <div class="list-group" id="list__conversaciones">
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="chat col-12 col-lg-7 col-xl-8 p-0 d-lg-flex flex-lg-column justify-content-lg-between">
+      <div class="chat__actual d-flex justify-content-between align-items-center py-1 px-3 pb-2 bg-Teal-paleDark d-none">
+        <div class="d-flex flex-grow-1 align-items-center" id="chat__encabezado">
+          <img src="" alt="" class="chat__img rounded-circle w-10 me-1">
+          <div class="chat__info p-0">
+            <h5 class="chat__nombre m-0"></h5>
+            <p class="chat__conexion m-0 d"></p>
+          </div>
+        </div>
+        <i class="fa-solid fa-ellipsis-vertical d-none d-lg-block"></i>
+      </div>
+      <div data-bs-spy="scroll" data-bs-target="#conversa" data-bs-smooth-scroll="true" class="chat__items d-flex flex-column py-0 px-2" id="conversaList" tabindex="0">
+        <p class="textos rounded-4 p-3 bg-light text-center align-self-center m-auto p-5 bg-opacity-75 fw-bold">Selecciona una conversación para ver los mensajes</p>
+      </div>
+      <div class="chat__escribir bg-Teal-paleDark text-Teal-Dark d-flex align-items-center p-1 d-none">
+        <i class="fa-regular fa-face-smile fa-lg"></i>
+        <div class="btn-group dropup">
+          <button type="button" class="dropdown-toggle btn btn-outline-Teal-Dark btn-sm" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <ul class="dropdown-menu bg-Teal-paleDark">
+            <li class="drop__item text-center">
+              <i class="fa-solid fa-paperclip my-0 mx-1"></i>
+              <i class="fa-regular fa-image my-0 mx-1"></i>
+              <i class="fa-solid fa-video my-0 mx-1"></i>
+              <i class="fa-solid fa-camera my-0 mx-1"></i>
+              <i class="fa-solid fa-gear my-0 mx-1 ps-1 border-start"></i>
+            </li>
+          </ul>
+        </div>
+        <form id="inputMensaje" class="d-flex flex-grow-1">
+          <input type="text" class="escribir p-1 my-0 mx-1 flex-grow-1 border border-1 border-ligth rounded" id="inputText">
+          <button type="submit" class="btn btn-outline-Teal-Dark p-0 px-1"><i class="fa-solid fa-circle-arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

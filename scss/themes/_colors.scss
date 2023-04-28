@@ -1,0 +1,9 @@
+$custom-colors: (
+  "custom-blue": #3D586A,
+  "Teal-petrol": #59425c,
+  "Teal-paleDark": #c1bcb7,
+  "Teal-pale": #FFCB9A,
+  "Teal-skyblue": #D2E8E3,
+    
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);

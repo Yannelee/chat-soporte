@@ -1,0 +1,31 @@
+.chat__items{
+  height: 88vh;
+  overflow: auto;
+  .textos{
+    max-width: 80%;
+  }
+}
+.offcanvas__mobile{
+  max-width: 90%;
+  .offcanvas-body{
+    height: 95vh;
+    overflow: auto;
+  }
+}
+.quote{
+  width: 14.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.toggle__text{
+  font-size: small;
+}
+.dropdown-menu{
+  width: 30%;
+}
+.fa-solid:hover, .fa-regular:hover{
+  cursor: pointer;
+  font-size: larger;
+  color: #7b4282;
+}
